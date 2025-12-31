@@ -33,6 +33,7 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
                     {/* Channel Media - Supports Video or Image */}
                     {channel.identMedia.match(/\.(mp4|webm)$/i) ? (
                         <video
+                            key={channel.identMedia}
                             src={channel.identMedia}
                             className="w-full h-full object-cover opacity-80"
                             autoPlay
