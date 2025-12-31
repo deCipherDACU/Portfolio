@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { Channel } from '../../data/types';
 import { quotes } from '../../data/quotes';
 import { Button } from '../shared/Button';
@@ -15,14 +15,16 @@ interface TVScreenProps {
 }
 
 export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScreenProps) => {
-    const [randomQuote, setRandomQuote] = useState(quotes[0]);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-        if (!isPoweredOn) {
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            setRandomQuote(quotes[randomIndex]);
+        if (isPoweredOn && channel.identMedia.match(/\.(mp4|webm)$/i) && videoRef.current) {
+            videoRef.current.load();
+            videoRef.current.play().catch(error => {
+                console.log("Autoplay prevented:", error);
+            });
         }
-    }, [isPoweredOn]);
+    }, [channel.identMedia, isPoweredOn]);
 
     return (
         <div className={`relative w-full h-full bg-slate-900 tv-scanlines screen-flicker ${isTurningOff ? 'animate-crt-off' : ''}`}>
@@ -33,13 +35,14 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
                     {/* Channel Media - Supports Video or Image */}
                     {channel.identMedia.match(/\.(mp4|webm)$/i) ? (
                         <video
+                            ref={videoRef}
                             key={channel.identMedia}
                             src={channel.identMedia}
                             className="w-full h-full object-cover opacity-80"
-                            autoPlay
                             loop
                             muted
                             playsInline
+                            autoPlay
                         />
                     ) : (
                         <img
