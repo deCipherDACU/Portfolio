@@ -34,7 +34,7 @@ export const channels: Channel[] = [
         name: 'Showcase 04',
         accentColor: 'from-green-500 to-teal-500',
         description: 'Visual showcase featuring 5(1).mp4',
-        identMedia: '/5(1).mp4',
+        identMedia: '/5.mp4',
         icon: 'Play',
     },
     {
@@ -43,7 +43,7 @@ export const channels: Channel[] = [
         name: 'Showcase 05',
         accentColor: 'from-yellow-500 to-amber-500',
         description: 'Visual showcase featuring 5(2).mp4',
-        identMedia: '/5(2).mp4',
+        identMedia: '/5.mp4',
         icon: 'Play',
     },
     {

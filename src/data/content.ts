@@ -31,7 +31,7 @@ export const portfolioContent = {
         title: "Coca Cola AI Ad",
         category: "AI Advertisement",
         description: "Coca Cola AI ad made with Veo 3 and ElevenLabs",
-        videoSrc: "/Coca Cola Ad.mp4",
+        videoSrc: "/coca-cola-ad.mp4",
     } as VideoProject,
 
     // Grid of secondary videos
@@ -41,7 +41,7 @@ export const portfolioContent = {
             title: "Zara Documentary",
             category: "Business Breakdown",
             description: "A cinematic journey through style and elegance.",
-            videoSrc: "/Zara Documentry.mp4",
+            youtubeId: "fWGKXRecelU",
             thumbnail: "/Zara.png",
         },
         {
@@ -49,7 +49,7 @@ export const portfolioContent = {
             title: "Indian Militant",
             category: "Podcast Hook",
             description: "Engaging podcast highlights.",
-            videoSrc: "/Podcast Hook.mp4",
+            youtubeId: "B93gFxR1DIk",
             thumbnail: "/Podcast.png",
         },
         {
@@ -57,7 +57,7 @@ export const portfolioContent = {
             title: "Gulab Jamun AI",
             category: "AI Storytelling",
             description: "AI documentary short",
-            videoSrc: "/Gulab jamoon.mp4",
+            youtubeId: "VvMv0XYo9B8",
         },
     ] as VideoProject[],
 
