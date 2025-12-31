@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Twitter, Youtube, ArrowRight } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 import { Button } from '../shared/Button';
 
 export const Contact = () => {

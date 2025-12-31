@@ -1,4 +1,4 @@
-import { Menu, X, Tv } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '../shared/Button';
 
