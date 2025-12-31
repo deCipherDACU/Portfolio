@@ -18,6 +18,7 @@ export const channels: Channel[] = [
         accentColor: 'from-purple-500 to-pink-500',
         description: 'Visual showcase featuring 1.mp4',
         identMedia: video1,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -27,6 +28,7 @@ export const channels: Channel[] = [
         accentColor: 'from-orange-500 to-red-500',
         description: 'Visual showcase featuring 2.mp4',
         identMedia: video2,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -36,6 +38,7 @@ export const channels: Channel[] = [
         accentColor: 'from-blue-500 to-cyan-500',
         description: 'Visual showcase featuring 4.mp4',
         identMedia: video4,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -45,6 +48,7 @@ export const channels: Channel[] = [
         accentColor: 'from-green-500 to-teal-500',
         description: 'Visual showcase featuring 5(1).mp4',
         identMedia: video5,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -54,6 +58,7 @@ export const channels: Channel[] = [
         accentColor: 'from-yellow-500 to-amber-500',
         description: 'Visual showcase featuring 5(2).mp4',
         identMedia: video5, // Reusing 5.mp4 as fallback/replacement
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -72,6 +77,7 @@ export const channels: Channel[] = [
         accentColor: 'from-pink-500 to-rose-500',
         description: 'Visual showcase featuring 6.mp4',
         identMedia: video6,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -81,6 +87,7 @@ export const channels: Channel[] = [
         accentColor: 'from-red-500 to-orange-500',
         description: 'Visual showcase featuring 7.mp4',
         identMedia: video7,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -90,6 +97,7 @@ export const channels: Channel[] = [
         accentColor: 'from-cyan-500 to-blue-500',
         description: 'Visual showcase featuring 9.mp4',
         identMedia: video9,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -99,6 +107,7 @@ export const channels: Channel[] = [
         accentColor: 'from-teal-500 to-green-500',
         description: 'Visual showcase featuring 10.mp4',
         identMedia: video10,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -108,6 +117,7 @@ export const channels: Channel[] = [
         accentColor: 'from-amber-500 to-yellow-500',
         description: 'Visual showcase featuring 11.mp4',
         identMedia: video11,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -117,6 +127,7 @@ export const channels: Channel[] = [
         accentColor: 'from-violet-500 to-purple-500',
         description: 'Visual showcase featuring 13.mp4',
         identMedia: video13,
+        mediaType: 'video',
         icon: 'Play',
     },
 ];

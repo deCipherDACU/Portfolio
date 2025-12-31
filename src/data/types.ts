@@ -22,6 +22,7 @@ export interface Channel {
     accentColor: string;
     description: string;
     identMedia: string; // Video URL or animated placeholder
+    mediaType?: 'video' | 'image';
     icon: string;
     projects?: Project[];
 }

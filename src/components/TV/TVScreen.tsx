@@ -27,12 +27,14 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
 
     useEffect(() => {
         if (isPoweredOn && channel.identMedia.match(/\.(mp4|webm)$/i) && videoRef.current) {
-            videoRef.current.load();
-            videoRef.current.play().catch(error => {
-                console.log("Autoplay prevented:", error);
-            });
-        }
-    }, [channel.identMedia, isPoweredOn]);
+            const isVideo = channel.mediaType === 'video' || channel.identMedia.match(/\.(mp4|webm)$/i);
+            if (isPoweredOn && isVideo && videoRef.current) {
+                videoRef.current.load();
+                videoRef.current.play().catch(error => {
+                    console.log("Autoplay prevented:", error);
+                });
+            }
+        }, [channel.identMedia, channel.mediaType, isPoweredOn]);
 
     return (
         <div className={`relative w-full h-full bg-slate-900 tv-scanlines screen-flicker ${isTurningOff ? 'animate-crt-off' : ''}`}>
@@ -41,7 +43,7 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
                 <>
                     {/* Channel Media */}
                     {/* Channel Media - Supports Video or Image */}
-                    {channel.identMedia.match(/\.(mp4|webm)$/i) ? (
+                    {channel.mediaType === 'video' || channel.identMedia.match(/\.(mp4|webm)$/i) ? (
                         <video
                             ref={videoRef}
                             key={channel.identMedia}
