@@ -1,3 +1,13 @@
+import video1 from '../assets/videos/1.mp4';
+import video2 from '../assets/videos/2.mp4';
+import video4 from '../assets/videos/4.mp4';
+import video5 from '../assets/videos/5.mp4';
+import video6 from '../assets/videos/6.mp4';
+import video7 from '../assets/videos/7.mp4';
+import video9 from '../assets/videos/9.mp4';
+import video10 from '../assets/videos/10.mp4';
+import video11 from '../assets/videos/11.mp4';
+import video13 from '../assets/videos/13.mp4';
 import type { Channel } from './types';
 
 export const channels: Channel[] = [
@@ -7,7 +17,7 @@ export const channels: Channel[] = [
         name: 'Showcase 01',
         accentColor: 'from-purple-500 to-pink-500',
         description: 'Visual showcase featuring 1.mp4',
-        identMedia: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        identMedia: video1,
         icon: 'Play',
     },
     {
@@ -16,7 +26,7 @@ export const channels: Channel[] = [
         name: 'Showcase 02',
         accentColor: 'from-orange-500 to-red-500',
         description: 'Visual showcase featuring 2.mp4',
-        identMedia: '/2.mp4',
+        identMedia: video2,
         icon: 'Play',
     },
     {
@@ -25,7 +35,7 @@ export const channels: Channel[] = [
         name: 'Showcase 03',
         accentColor: 'from-blue-500 to-cyan-500',
         description: 'Visual showcase featuring 4.mp4',
-        identMedia: '/4.mp4',
+        identMedia: video4,
         icon: 'Play',
     },
     {
@@ -34,7 +44,7 @@ export const channels: Channel[] = [
         name: 'Showcase 04',
         accentColor: 'from-green-500 to-teal-500',
         description: 'Visual showcase featuring 5(1).mp4',
-        identMedia: '/5.mp4',
+        identMedia: video5,
         icon: 'Play',
     },
     {
@@ -43,7 +53,7 @@ export const channels: Channel[] = [
         name: 'Showcase 05',
         accentColor: 'from-yellow-500 to-amber-500',
         description: 'Visual showcase featuring 5(2).mp4',
-        identMedia: '/5.mp4',
+        identMedia: video5, // Reusing 5.mp4 as fallback/replacement
         icon: 'Play',
     },
     {
@@ -52,7 +62,7 @@ export const channels: Channel[] = [
         name: 'Showcase 06',
         accentColor: 'from-indigo-500 to-violet-500',
         description: 'Visual showcase featuring 5.mp4',
-        identMedia: '/5.mp4',
+        identMedia: video5,
         icon: 'Play',
     },
     {
@@ -61,7 +71,7 @@ export const channels: Channel[] = [
         name: 'Showcase 07',
         accentColor: 'from-pink-500 to-rose-500',
         description: 'Visual showcase featuring 6.mp4',
-        identMedia: '/6.mp4',
+        identMedia: video6,
         icon: 'Play',
     },
     {
@@ -70,7 +80,7 @@ export const channels: Channel[] = [
         name: 'Showcase 08',
         accentColor: 'from-red-500 to-orange-500',
         description: 'Visual showcase featuring 7.mp4',
-        identMedia: '/7.mp4',
+        identMedia: video7,
         icon: 'Play',
     },
     {
@@ -79,7 +89,7 @@ export const channels: Channel[] = [
         name: 'Showcase 09',
         accentColor: 'from-cyan-500 to-blue-500',
         description: 'Visual showcase featuring 9.mp4',
-        identMedia: '/9.mp4',
+        identMedia: video9,
         icon: 'Play',
     },
     {
@@ -88,7 +98,7 @@ export const channels: Channel[] = [
         name: 'Showcase 10',
         accentColor: 'from-teal-500 to-green-500',
         description: 'Visual showcase featuring 10.mp4',
-        identMedia: '/10.mp4',
+        identMedia: video10,
         icon: 'Play',
     },
     {
@@ -97,7 +107,7 @@ export const channels: Channel[] = [
         name: 'Showcase 11',
         accentColor: 'from-amber-500 to-yellow-500',
         description: 'Visual showcase featuring 11.mp4',
-        identMedia: '/11.mp4',
+        identMedia: video11,
         icon: 'Play',
     },
     {
@@ -106,7 +116,7 @@ export const channels: Channel[] = [
         name: 'Showcase 12',
         accentColor: 'from-violet-500 to-purple-500',
         description: 'Visual showcase featuring 13.mp4',
-        identMedia: '/13.mp4',
+        identMedia: video13,
         icon: 'Play',
     },
 ];
