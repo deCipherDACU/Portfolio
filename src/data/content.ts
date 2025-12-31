@@ -31,7 +31,7 @@ export const portfolioContent = {
         title: "Coca Cola AI Ad",
         category: "AI Advertisement",
         description: "Coca Cola AI ad made with Veo 3 and ElevenLabs",
-        videoSrc: "/coca-cola-ad.mp4",
+        youtubeId: "vBQaIdvtsEA",
     } as VideoProject,
 
     // Grid of secondary videos
