@@ -7,7 +7,7 @@ export const channels: Channel[] = [
         name: 'Showcase 01',
         accentColor: 'from-purple-500 to-pink-500',
         description: 'Visual showcase featuring 1.mp4',
-        identMedia: '/1.mp4',
+        identMedia: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
         icon: 'Play',
     },
     {

@@ -16,6 +16,14 @@ interface TVScreenProps {
 
 export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScreenProps) => {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const [randomQuote, setRandomQuote] = useState(quotes[0]);
+
+    useEffect(() => {
+        if (!isPoweredOn) {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            setRandomQuote(quotes[randomIndex]);
+        }
+    }, [isPoweredOn]);
 
     useEffect(() => {
         if (isPoweredOn && channel.identMedia.match(/\.(mp4|webm)$/i) && videoRef.current) {
