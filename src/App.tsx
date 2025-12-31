@@ -4,6 +4,7 @@ import { quotes } from './data/quotes';
 import { projects } from './data/projects';
 import { useChannelSwitch } from './hooks/useChannelSwitch';
 import { useKeyboard } from './hooks/useKeyboard';
+import { useTVSound } from './hooks/useTVSound';
 import { Navigation } from './components/Layout/Navigation';
 import { TVShell } from './components/TV/TVShell';
 import { TVScreen } from './components/TV/TVScreen';
@@ -23,10 +24,13 @@ import { Modal } from './components/shared/Modal';
 import { ChannelInfo } from './components/Channel/ChannelInfo';
 import type { Tool } from './data/types';
 
+import { SnowEffect } from './components/shared/SnowEffect';
+
 function App() {
   const {
     currentChannel: channelIndex,
     isPoweredOn,
+    isTurningOff, // Destructure this
     isTransitioning,
     nextChannel,
     prevChannel,
@@ -36,6 +40,8 @@ function App() {
     showPowerOnQuote,
     currentQuote,
   } = useChannelSwitch(channels.length);
+
+  const { playStatic, playClick, playSwitch } = useTVSound();
 
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [isTuneInOpen, setIsTuneInOpen] = useState(false);
@@ -47,15 +53,38 @@ function App() {
   const activeProjects = projects[activeChannel.id] || [];
   const isToolLab = activeChannel.id === 'ch-07';
 
+  // Sound Wrappers
+  const handleNextChannel = () => {
+    playStatic();
+    nextChannel();
+  };
+
+  const handlePrevChannel = () => {
+    playStatic();
+    prevChannel();
+  };
+
+  const handleTogglePower = () => {
+    playSwitch();
+    togglePower();
+  };
+
+  const handleGoToChannel = (idx: number) => {
+    playStatic();
+    goToChannel(idx);
+  };
+
   useKeyboard({
-    ArrowUp: prevChannel,
-    ArrowDown: nextChannel,
+    ArrowUp: handlePrevChannel,
+    ArrowDown: handleNextChannel,
     Enter: () => {
+      playSwitch();
       if (!isToolLab) {
         setIsTuneInOpen(true);
       }
     },
     Escape: () => {
+      playClick();
       setIsGalleryOpen(false);
       setIsTuneInOpen(false);
       setIsChannelListOpen(false);
@@ -65,6 +94,7 @@ function App() {
   });
 
   const handleTuneIn = () => {
+    playSwitch();
     if (isToolLab) {
       const toolSection = document.getElementById('tool-lab');
       if (toolSection) {
@@ -80,6 +110,9 @@ function App() {
       {/* Subtle Texture - optional, keep it very dark */}
       <div className="fixed inset-0 pointer-events-none opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-50 z-0" />
 
+      {/* Winter Snow Effect */}
+      <SnowEffect />
+
       <Navigation />
 
       <main>
@@ -87,15 +120,20 @@ function App() {
         <section className="pt-20 pb-0 flex flex-col items-center">
           <TVShell
             isPoweredOn={isPoweredOn}
-            onChannelChange={nextChannel}
-            onTogglePower={togglePower}
-            onVolumeChange={(dir) => console.log(`Volume ${dir} (visual only)`)}
+            onChannelUp={handleNextChannel}
+            onChannelDown={handlePrevChannel}
+            onTogglePower={handleTogglePower}
+            onVolumeClick={() => {
+              playClick();
+              console.log('Volume knob clicked');
+            }}
           >
             <TVScreen
               channel={activeChannel}
               isPoweredOn={isPoweredOn}
+              isTurningOff={isTurningOff}
               onExplore={handleTuneIn}
-              onTurnOn={togglePower}
+              onTurnOn={handleTogglePower}
             />
             <PowerOnQuote
               isVisible={showPowerOnQuote && isPoweredOn}
@@ -153,7 +191,7 @@ function App() {
             <button
               key={ch.id}
               onClick={() => {
-                goToChannel(idx);
+                handleGoToChannel(idx);
                 setIsChannelListOpen(false);
               }}
               className={`flex items-center gap-4 p-4 rounded-xl border transition-all ${idx === channelIndex

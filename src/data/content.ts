@@ -3,8 +3,12 @@ export interface VideoProject {
     id: string;
     title: string;
     category: string;
-    youtubeId: string; // The 11-character YouTube ID (e.g., dQw4w9WgXcQ)
+    youtubeId?: string; // Optional if using direct URL
     thumbnail?: string; // Optional custom thumbnail
+    platform?: 'youtube' | 'instagram';
+    url?: string; // Direct link for Instagram/other platforms
+    description?: string; // Optional description
+    videoSrc?: string; // Direct video file source
 }
 
 export interface DesignProject {
@@ -24,36 +28,65 @@ export const portfolioContent = {
     // Main featured video (Large player)
     featuredVideo: {
         id: "featured-1",
-        title: "Showreel 2025",
-        category: "Director / Editor",
-        youtubeId: "dQw4w9WgXcQ", // REPLACE THIS with your actual Showreel ID
+        title: "Coca Cola AI Ad",
+        category: "AI Advertisement",
+        description: "Coca Cola AI ad made with Veo 3 and ElevenLabs",
+        videoSrc: "/Coca Cola Ad.mp4",
     } as VideoProject,
 
     // Grid of secondary videos
-    recentVideos: [
+    horizontalVideos: [
         {
-            id: "vid-1",
-            title: "Commercial Work",
-            category: "Cinematography",
-            youtubeId: "LXb3EKWsInQ", // REPLACE THIS
+            id: "vid-h1",
+            title: "Zara Documentary",
+            category: "Business Breakdown",
+            description: "A cinematic journey through style and elegance.",
+            videoSrc: "/Zara Documentry.mp4",
+            thumbnail: "/Zara.png",
         },
         {
-            id: "vid-2",
-            title: "Music Video",
-            category: "Direction",
-            youtubeId: "9bZkp7q19f0", // REPLACE THIS
+            id: "vid-h2",
+            title: "Indian Militant",
+            category: "Podcast Hook",
+            description: "Engaging podcast highlights.",
+            videoSrc: "/Podcast Hook.mp4",
+            thumbnail: "/Podcast.png",
         },
         {
-            id: "vid-3",
-            title: "Documentary Short",
-            category: "Editing",
-            youtubeId: "M7lc1UVf-VE", // REPLACE THIS
+            id: "vid-h3",
+            title: "Gulab Jamun AI",
+            category: "AI Storytelling",
+            description: "AI documentary short",
+            videoSrc: "/Gulab jamoon.mp4",
+        },
+    ] as VideoProject[],
+
+    // Grid of secondary videos - Vertical (9:16)
+    // Grid of secondary videos - Vertical (9:16)
+    verticalVideos: [
+        {
+            id: "vid-v1",
+            title: "Instagram Reel 1",
+            category: "Social Media",
+            platform: 'instagram',
+            url: "https://www.instagram.com/reel/DLJv55WSuK3/",
+            thumbnail: "/1.jpg",
         },
         {
-            id: "vid-4",
-            title: "Brand Campaign",
-            category: "Color Grading",
-            youtubeId: "JGwWNGJdvx8", // REPLACE THIS
+            id: "vid-v2",
+            title: "Instagram Reel 2",
+            category: "Social Media",
+            platform: 'instagram',
+            url: "https://www.instagram.com/reel/DLPrCChSnBd/",
+            thumbnail: "/2.jpg",
+        },
+        {
+            id: "vid-v3",
+            title: "Instagram Reel 3",
+            category: "Social Media",
+            platform: 'instagram',
+            url: "https://www.instagram.com/reel/DL9PftNSbFY/",
+            thumbnail: "/3.jpg",
         },
     ] as VideoProject[],
 

@@ -17,12 +17,12 @@ export const About = () => {
                     VISUAL <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200 glow-text">SYSTEMS</span> ARCHITECT.
                 </h2>
 
-                <div className="text-xl text-neutral-light/80 leading-relaxed font-medium text-center max-w-2xl mx-auto">
+                <div className="text-xl text-neutral-light/80 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                     <p className="mb-6">
-                        I am a visual storyteller and creative technologist specalizing in high-impact video production and AI-driven workflows.
+                        I'm Shubham Pal, a 21-year-old creative from Varanasi, now living in Hebbal, Bengaluru, crafting visual stories since 2019. My freelancing journey began in 2023, and I now drive growth at YAAS (YouTube as a Service), constantly learning and evolving.
                     </p>
                     <p>
-                        With over 8 years of experience across short-form content, cinematic documentaries, and motion graphics, I bridge the gap between traditional filmmaking and modern digital innovation.
+                        Deeply passionate about AI filmmaking and automation, I am also pursuing a BS in Data Science and Applications from IIT Madras, bridging the gap between artistic expression and data-driven innovation.
                     </p>
                 </div>
             </div>
@@ -42,18 +42,41 @@ export const About = () => {
             </div>
 
             <div className="max-w-4xl mx-auto px-6 relative z-10">
-                <div className="grid md:grid-cols-4 gap-8">
+                <div className="grid md:grid-cols-5 gap-8">
                     {[
-                        { label: 'Projects Completed', value: '250+' },
-                        { label: 'Global Brands', value: '45+' },
-                        { label: 'Total Views', value: '100M+' },
-                        { label: 'AI Models Taught', value: '12' },
+                        { label: 'Project Completed', value: '120+' },
+                        { label: 'Global Brands', value: '4+' },
+                        { label: 'Years Experience', value: '2+' },
+                        { label: 'Total Views', value: '30M+' },
+                        { label: 'AI Tools used', value: '15+' },
                     ].map(stat => (
                         <div key={stat.label} className="p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-white/10 transition-colors text-center">
                             <div className="text-4xl font-black text-white mb-2 italic tracking-tighter">{stat.value}</div>
                             <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{stat.label}</div>
                         </div>
                     ))}
+                </div>
+
+                {/* Brand Logos */}
+                <div className="mt-24 pt-12 border-t border-white/5">
+                    <p className="text-center text-sm font-bold text-white/30 uppercase tracking-[0.2em] mb-12">Worked with Global brands</p>
+                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-80">
+                        {[
+                            { name: 'Vi', src: '/vi.png', height: 'h-16' },
+                            { name: 'Cleartrip', src: '/cleartrip-logo.png', height: 'h-24' },
+                            { name: 'Aevy', src: '/aevy.png', height: 'h-14' },
+                            { name: 'Vi Movies', src: '/vi-movies.png', height: 'h-36' },
+                            { name: 'Trvl Pass', src: '/trvlpass.png', height: 'h-14' },
+                        ].map((brand) => (
+                            <div key={brand.name} className="group relative">
+                                <img
+                                    src={brand.src}
+                                    alt={brand.name}
+                                    className={`${brand.height} w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500`}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

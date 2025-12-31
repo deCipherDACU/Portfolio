@@ -30,7 +30,7 @@ export const PowerOnQuote = ({ isVisible, quote, author, children }: PowerOnQuot
 
     return (
         <div
-            className="absolute inset-0 z-50 flex items-center justify-center bg-black/90 transition-opacity duration-500 overflow-hidden tv-scanlines"
+            className="absolute inset-0 z-50 flex items-center justify-center bg-black/90 transition-opacity duration-500 overflow-hidden tv-scanlines w-full h-full"
             style={{ opacity }}
         >
             <div className="relative z-10 max-w-2xl px-8 text-center">

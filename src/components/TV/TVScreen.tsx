@@ -2,18 +2,19 @@ import { useState, useEffect } from 'react';
 import type { Channel } from '../../data/types';
 import { quotes } from '../../data/quotes';
 import { Button } from '../shared/Button';
-import { Play, Power } from 'lucide-react';
+import { Power } from 'lucide-react';
 import { PowerOnQuote } from './PowerOnQuote';
 import '../../styles/tv-effects.css';
 
 interface TVScreenProps {
     channel: Channel;
     isPoweredOn: boolean;
+    isTurningOff?: boolean;
     onExplore: () => void;
     onTurnOn: () => void;
 }
 
-export const TVScreen = ({ channel, isPoweredOn, onExplore, onTurnOn }: TVScreenProps) => {
+export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScreenProps) => {
     const [randomQuote, setRandomQuote] = useState(quotes[0]);
 
     useEffect(() => {
@@ -24,7 +25,7 @@ export const TVScreen = ({ channel, isPoweredOn, onExplore, onTurnOn }: TVScreen
     }, [isPoweredOn]);
 
     return (
-        <div className="relative w-full h-full bg-slate-900 tv-scanlines screen-flicker">
+        <div className={`relative w-full h-full bg-slate-900 tv-scanlines screen-flicker ${isTurningOff ? 'animate-crt-off' : ''}`}>
             {/* Channel Content */}
             {isPoweredOn && (
                 <>
@@ -66,14 +67,7 @@ export const TVScreen = ({ channel, isPoweredOn, onExplore, onTurnOn }: TVScreen
                         </div>
 
                         <div className="flex justify-center group mb-8">
-                            <Button
-                                variant="outline"
-                                className="rounded-sm bg-primary text-black border-2 border-primary hover:bg-black hover:text-primary hover:border-primary px-10 py-8 text-xl font-bold uppercase tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(250,198,56,0.3)] hover:shadow-[0_0_40px_rgba(250,198,56,0.6)]"
-                                onClick={onExplore}
-                            >
-                                <Play className="mr-3 h-6 w-6 fill-current" />
-                                Tune In
-                            </Button>
+                            {/* Tune In Button Removed */}
                         </div>
                     </div>
 

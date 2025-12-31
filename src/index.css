@@ -61,3 +61,21 @@ body {
 #root {
   width: 100%;
 }
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(-10px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(10px) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(-10px) rotate(360deg);
+  }
+}
+
+.animate-fall {
+  animation: fall linear infinite;
+}

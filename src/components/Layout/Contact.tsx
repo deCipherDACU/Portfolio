@@ -13,36 +13,33 @@ export const Contact = () => {
                 </h2>
 
                 <p className="text-xl text-neutral-light/70 max-w-2xl mx-auto mb-16">
-                    Currently accepting new projects for Q1 2025. Whether you need a cinematic reel, social content, or AI-integrated production, let's talk.
+                    Currently looking to explore AI-based filmmaking, cinematic reels, social content, and automation. If you need dynamic visuals or AI-integrated production, let's talk.
                 </p>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-24">
-                    <Button className="rounded-full px-10 py-8 text-xl h-auto bg-white text-slate-950 hover:scale-105 transition-transform">
-                        <Mail className="mr-3" size={24} /> Start a Conversation
-                    </Button>
+                    <a href="mailto:dacuman29@gmail.com">
+                        <Button className="rounded-full px-10 py-8 text-xl h-auto bg-white text-slate-950 hover:scale-105 transition-transform">
+                            <Mail className="mr-3" size={24} /> Start a Conversation
+                        </Button>
+                    </a>
                     <div className="flex gap-4">
-                        {[
-                            { icon: Linkedin, label: 'LinkedIn' },
-                            { icon: Twitter, label: 'Twitter' },
-                            { icon: Youtube, label: 'YouTube' },
-                        ].map(social => (
-                            <Button key={social.label} variant="outline" size="lg" className="rounded-full w-20 h-20 border-white/10 p-0 hover:bg-white/5 transition-all">
-                                <social.icon size={28} />
+                        <a href="https://www.linkedin.com/in/dacuman/" target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" size="lg" className="rounded-full w-20 h-20 border-white/10 p-0 hover:bg-white/5 transition-all" title="LinkedIn">
+                                <Linkedin size={28} />
                             </Button>
-                        ))}
+                        </a>
+                        <a href="https://x.com/DacumanG" target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" size="lg" className="rounded-full w-20 h-20 border-white/10 p-0 hover:bg-white/5 transition-all text-2xl font-bold" title="@DacumanG">
+                                {/* X Logo (Custom or Text) */}
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </Button>
+                        </a>
                     </div>
                 </div>
 
-                <div className="pt-24 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 text-[10px] font-bold text-slate-600 uppercase tracking-[0.3em]">
-                    <div>© 2024 Portfolio.TV - All Rights Reserved</div>
-                    <div className="flex gap-8">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                    </div>
-                    <div className="flex items-center gap-2 group cursor-pointer hover:text-white transition-colors">
-                        Back to Top <ArrowRight className="-rotate-90 group-hover:-translate-y-1 transition-transform" size={14} />
-                    </div>
-                </div>
+                {/* Footer Removed */}
             </div>
         </section>
     );

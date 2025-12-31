@@ -16,13 +16,20 @@ export const Navigation = () => {
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background-dark/90 backdrop-blur-md">
             <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded bg-surface-dark border border-white/10 flex items-center justify-center relative shadow-[0_0_15px_rgba(250,198,56,0.1)] group">
-                        <Tv className="text-white/80 group-hover:text-primary transition-colors duration-300" size={20} />
-                        <div className="absolute inset-0 bg-scanlines opacity-50" />
+                    <div className="w-10 h-10 rounded bg-surface-dark border border-white/10 flex items-center justify-center relative shadow-[0_0_15px_rgba(250,198,56,0.1)] group overflow-hidden">
+                        {/* Wolf Logo */}
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-primary transition-colors duration-300 z-10">
+                            <path d="M12 2L6 8L2 14C2 17 4 22 12 22C20 22 22 17 22 14L18 8L12 2Z" />
+                            <path d="M6 8L12 12L18 8" />
+                            <path d="M9 16C9 16 10 18 12 18C14 18 15 16 15 16" />
+                            <path d="M9 12L10 14" />
+                            <path d="M15 12L14 14" />
+                        </svg>
+                        <div className="absolute inset-0 bg-scanlines opacity-50 pointer-events-none" />
                     </div>
                     <div>
                         <h1 className="text-lg font-bold font-display tracking-wider text-white leading-none">
-                            PORTFOLIO<span className="text-white/40 font-normal">.TV</span>
+                            DACUMAN<span className="text-white/40 font-normal">.TV</span>
                         </h1>
                         <div className="flex items-center gap-2 mt-0.5">
                             <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
@@ -44,21 +51,7 @@ export const Navigation = () => {
                     ))}
                 </div>
 
-                <div className="flex items-center gap-4">
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        className="hidden md:flex border-white/10 text-white/70 hover:text-white hover:bg-white/5 font-display tracking-wide text-xs"
-                    >
-                        RESUME
-                    </Button>
-                    <Button
-                        size="sm"
-                        className="bg-primary text-black font-bold hover:bg-primary/90 shadow-[0_0_20px_rgba(250,198,56,0.25)] border border-white/10 tracking-wide font-display text-xs"
-                    >
-                        TUNE IN
-                    </Button>
-                </div>
+                {/* Buttons Removed */}
             </div>
             {/* Mobile Menu Toggle */}
             <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>

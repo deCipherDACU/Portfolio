@@ -18,6 +18,13 @@ export const ChannelTransition = ({ isTransitioning }: ChannelTransitionProps) =
 
             {/* Flicker Flash */}
             <div className="absolute inset-0 bg-white/10 animate-pulse duration-75" />
+
+            {/* Tuning Text */}
+            <div className="absolute inset-0 flex items-center justify-center z-50">
+                <h2 className="text-4xl md:text-6xl font-display font-bold text-white tracking-[0.2em] animate-pulse drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+                    TUNING...
+                </h2>
+            </div>
         </div>
     );
 };

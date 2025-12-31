@@ -8,7 +8,16 @@ interface TVShellProps {
     onTogglePower?: () => void;
 }
 
-export const TVShell = ({ children, isPoweredOn = true, onChannelChange, onVolumeChange, onTogglePower }: TVShellProps) => {
+interface TVShellProps {
+    children: ReactNode;
+    isPoweredOn?: boolean;
+    onChannelUp?: () => void;
+    onChannelDown?: () => void;
+    onVolumeClick?: () => void;
+    onTogglePower?: () => void;
+}
+
+export const TVShell = ({ children, isPoweredOn = true, onChannelUp, onChannelDown, onVolumeClick, onTogglePower }: TVShellProps) => {
     return (
         <div className="relative z-10 w-[70%] mx-auto transform transition-transform duration-1000 px-4">
             {/* Vintage TV Casing - Rounded Retro Style (Yellow) */}
@@ -43,33 +52,33 @@ export const TVShell = ({ children, isPoweredOn = true, onChannelChange, onVolum
 
                         {/* Control Dials */}
                         <div className="flex flex-col gap-6 items-center mt-auto mb-8">
-                            {/* Channel Changer */}
+                            {/* Volume Control (Knob) - Was Channel */}
                             <div className="flex flex-col items-center gap-1 group">
-                                <span className="text-[9px] font-bold text-black/50 uppercase tracking-widest">CH</span>
+                                <span className="text-[9px] font-bold text-black/50 uppercase tracking-widest">VOL</span>
                                 <div
-                                    onClick={onChannelChange}
+                                    onClick={onVolumeClick}
                                     className="w-16 h-16 rounded-full bg-neutral-800 border-4 border-black shadow-[0_4px_10px_rgba(0,0,0,0.5),inset_0_2px_4px_rgba(255,255,255,0.1)] relative transform rotate-45 active:rotate-90 transition-transform duration-200 cursor-pointer"
+                                    title="Adjust Volume"
                                 >
                                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1 bg-black rounded-full transform -rotate-45" />
-                                    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1 h-3 bg-primary transition-colors" />
                                 </div>
                             </div>
 
-                            {/* Volume Control (Rocker Switch) */}
+                            {/* Channel Changer (Rocker Switch) - Was Volume */}
                             <div className="flex flex-col items-center gap-1 group">
-                                <span className="text-[9px] font-bold text-black/50 uppercase tracking-widest">VOL</span>
+                                <span className="text-[9px] font-bold text-black/50 uppercase tracking-widest">CH</span>
                                 <div className="flex flex-col gap-0.5 bg-neutral-900 p-0.5 rounded-lg border-2 border-black shadow-[0_4px_10px_rgba(0,0,0,0.5),inset_0_2px_4px_rgba(255,255,255,0.05)]">
                                     <button
-                                        onClick={() => onVolumeChange?.('up')}
+                                        onClick={onChannelUp}
                                         className="w-12 h-8 bg-neutral-800 rounded-t-md border-b border-black/50 active:bg-neutral-700 active:inner-shadow transition-colors flex items-center justify-center group/btn"
-                                        aria-label="Volume Up"
+                                        aria-label="Channel Up"
                                     >
                                         <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[6px] border-b-neutral-500 group-hover/btn:border-b-neutral-300" />
                                     </button>
                                     <button
-                                        onClick={() => onVolumeChange?.('down')}
+                                        onClick={onChannelDown}
                                         className="w-12 h-8 bg-neutral-800 rounded-b-md border-t border-white/5 active:bg-neutral-700 active:inner-shadow transition-colors flex items-center justify-center group/btn"
-                                        aria-label="Volume Down"
+                                        aria-label="Channel Down"
                                     >
                                         <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-500 group-hover/btn:border-t-neutral-300" />
                                     </button>

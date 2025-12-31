@@ -70,3 +70,37 @@
 .screen-flicker {
     animation: flicker 0.15s infinite;
 }
+
+/* CRT Turn Off Animation */
+@keyframes crt-off-h {
+    0% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(0.005);
+        opacity: 1;
+    }
+}
+
+@keyframes crt-off-v {
+    0% {
+        transform: scaleY(1);
+    }
+
+    40% {
+        transform: scaleY(0.005);
+    }
+
+    100% {
+        transform: scaleY(0.002);
+    }
+}
+
+.animate-crt-off {
+    animation: crt-off-v 0.4s ease-out forwards, crt-off-h 0.4s 0.2s ease-out forwards;
+    /* Optional: Bright flash at center point */
+    background: white !important;
+    filter: brightness(200%);
+}
