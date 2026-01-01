@@ -5,7 +5,7 @@ import video4 from '../assets/videos/4.webm';
 import video5 from '../assets/videos/5.webm';
 import video6 from '../assets/videos/6.webm';
 import video7 from '../assets/videos/7.webm';
-// video8 is missing, reusing video1 as placeholder
+import video8 from '../assets/videos/8.webm';
 import video9 from '../assets/videos/9.webm';
 import video10 from '../assets/videos/10.webm';
 import video11 from '../assets/videos/11.webm';
@@ -88,8 +88,8 @@ export const channels: Channel[] = [
         number: '08',
         name: 'Showcase 08',
         accentColor: 'from-red-500 to-orange-500',
-        description: 'Visual showcase featuring 7.webm (Reused)',
-        identMedia: video7, // Reusing 7 as 8 is missing
+        description: 'Visual showcase featuring 8.webm',
+        identMedia: video8,
         mediaType: 'video',
         icon: 'Play',
     },

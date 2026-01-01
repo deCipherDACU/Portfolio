@@ -52,11 +52,12 @@ export const Navigation = () => {
                 </div>
 
                 {/* Buttons Removed */}
+
+                {/* Mobile Menu Toggle */}
+                <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
             </div>
-            {/* Mobile Menu Toggle */}
-            <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
             {/* Mobile Menu Overlay */}
             {isMenuOpen && (
                 <div className="fixed inset-0 top-20 z-40 bg-slate-950 flex flex-col items-center justify-center gap-10 animate-in fade-in slide-in-from-top-4 duration-300">
