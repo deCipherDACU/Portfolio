@@ -112,8 +112,8 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
                                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 z-30 text-red-500 font-mono p-4 text-center">
                                     <div className="text-4xl mb-2">⚠</div>
                                     <div className="text-xl uppercase tracking-widest">Signal Lost</div>
-                                    <div className="text-xs mt-2 opacity-70">Unable to load media feed</div>
-                                    <div className="text-[10px] mt-1 opacity-50">{channel.identMedia.split('/').pop()}</div>
+                                    <div className="text-[length:var(--font-size-xs)] mt-2 opacity-70">Unable to load media feed</div>
+                                    <div className="text-[length:var(--font-size-xs)] mt-1 opacity-50">{channel.identMedia.split('/').pop()}</div>
                                 </div>
                             )}
                         </>
@@ -126,18 +126,18 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
                     )}
 
                     {/* Overlay UI */}
-                    <div className="absolute inset-0 flex flex-col justify-between p-8 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none">
+                    <div className="absolute inset-0 flex flex-col justify-between p-[4vw] md:p-8 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none">
                         <div className="flex justify-between items-start">
                             <div className="bg-black/80 backdrop-blur-sm px-4 py-2 rounded-sm border-l-4 border-primary">
-                                <span className="text-2xl md:text-4xl font-display font-bold text-white tracking-widest shadow-black drop-shadow-lg">
+                                <span className="text-[length:var(--font-size-xl)] md:text-4xl font-display font-bold text-white tracking-widest shadow-black drop-shadow-lg">
                                     {channel.number}
                                 </span>
                             </div>
                             <div className="text-right">
-                                <h2 className="text-xl md:text-3xl font-bold font-display text-white uppercase tracking-tighter drop-shadow-lg">
+                                <h2 className="text-[length:var(--font-size-lg)] md:text-3xl font-bold font-display text-white uppercase tracking-tighter drop-shadow-lg">
                                     {channel.name}
                                 </h2>
-                                <div className={`text-[10px] uppercase tracking-[0.3em] font-bold bg-black/50 px-2 py-0.5 inline-block mt-1 ${hasError ? 'text-red-500' : 'text-primary'}`}>
+                                <div className={`text-[length:var(--font-size-xs)] uppercase tracking-[0.3em] font-bold bg-black/50 px-2 py-0.5 inline-block mt-1 ${hasError ? 'text-red-500' : 'text-primary'}`}>
                                     {hasError ? 'CONNECTION ERR' : (isLoading ? 'ACQUIRING...' : 'SIGNAL LOCKED')}
                                 </div>
                             </div>
@@ -161,9 +161,9 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
             >
                 <Button
                     onClick={onTurnOn}
-                    className="bg-transparent border border-green-900/50 text-green-500 hover:bg-green-900/20 hover:text-green-400 hover:border-green-500/50 text-sm md:text-xl px-4 py-2 md:px-8 md:py-4 font-mono uppercase tracking-widest transition-all duration-300"
+                    className="bg-transparent border border-green-900/50 text-green-500 hover:bg-green-900/20 hover:text-green-400 hover:border-green-500/50 text-[length:var(--font-size-sm)] md:text-xl px-[4vw] py-[2vw] md:px-8 md:py-4 font-mono uppercase tracking-widest transition-all duration-300"
                 >
-                    <Power className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
+                    <Power className="w-[4vw] h-[4vw] md:w-5 md:h-5 mr-2 md:mr-3" />
                     Initialize System
                 </Button>
             </PowerOnQuote>

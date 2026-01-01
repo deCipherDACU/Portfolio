@@ -22,17 +22,17 @@ export const TVShell = ({ children, isPoweredOn = true, onChannelUp, onChannelDo
         <div className="relative z-10 w-full md:w-[70%] mx-auto transform transition-transform duration-1000 px-4">
             {/* Vintage TV Casing - Rounded Retro Style (Yellow) */}
             <div className={`
-                relative bg-tv-bezel p-4 md:p-8 rounded-[2rem] md:rounded-[3rem] shadow-2xl transition-all duration-700
-                before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:to-black/20 before:rounded-[2rem] md:before:rounded-[3rem] before:pointer-events-none
-                after:absolute after:inset-0 after:bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] after:opacity-20 after:mix-blend-overlay after:rounded-[2rem] md:after:rounded-[3rem] after:pointer-events-none
+                relative bg-tv-bezel p-[4vw] md:p-8 rounded-[5vw] md:rounded-[3rem] shadow-2xl transition-all duration-700
+                before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:to-black/20 before:rounded-[5vw] md:before:rounded-[3rem] before:pointer-events-none
+                after:absolute after:inset-0 after:bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] after:opacity-20 after:mix-blend-overlay after:rounded-[5vw] md:after:rounded-[3rem] after:pointer-events-none
                 ${isPoweredOn ? 'shadow-[0_20px_50px_rgba(0,0,0,0.5)]' : 'shadow-[0_10px_30px_rgba(0,0,0,0.3)] brightness-90'}
             `}>
                 {/* Vintage Chrome Trim */}
-                <div className="absolute inset-0 border-[4px] md:border-[8px] border-black/10 rounded-[2rem] md:rounded-[3rem] pointer-events-none" />
+                <div className="absolute inset-0 border-[1vw] md:border-[8px] border-black/10 rounded-[5vw] md:rounded-[3rem] pointer-events-none" />
 
                 <div className="flex flex-col md:flex-row gap-8 items-stretch">
                     {/* Screen Area */}
-                    <div className="flex-grow relative bg-black rounded-[1.5rem] md:rounded-[2rem] border-[8px] md:border-[16px] border-[#1a1a1a] shadow-[inset_0_0_20px_rgba(0,0,0,1)] overflow-hidden aspect-[4/3] md:aspect-video">
+                    <div className="flex-grow relative bg-black rounded-[4vw] md:rounded-[2rem] border-[2vw] md:border-[16px] border-[#1a1a1a] shadow-[inset_0_0_20px_rgba(0,0,0,1)] overflow-hidden aspect-[4/3] md:aspect-video">
                         <div className="w-full h-full relative overflow-hidden rounded-xl">
                             {children}
 
@@ -122,7 +122,7 @@ export const TVShell = ({ children, isPoweredOn = true, onChannelUp, onChannelDo
                     {/* Power */}
                     <button
                         onClick={onTogglePower}
-                        className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-2 transition-all ${isPoweredOn ? 'bg-red-600 border-red-800 text-white' : 'bg-neutral-800 border-neutral-700 text-neutral-500'}`}
+                        className={`w-[12vw] h-[12vw] max-w-[48px] max-h-[48px] rounded-full flex items-center justify-center shadow-lg border-2 transition-all ${isPoweredOn ? 'bg-red-600 border-red-800 text-white' : 'bg-neutral-800 border-neutral-700 text-neutral-500'}`}
                         aria-label="Power"
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -137,7 +137,7 @@ export const TVShell = ({ children, isPoweredOn = true, onChannelUp, onChannelDo
                         <div className="flex bg-neutral-800 rounded-lg border border-black/50 overflow-hidden shadow-inner">
                             <button
                                 onClick={onChannelDown}
-                                className="w-14 h-10 flex items-center justify-center hover:bg-neutral-700 active:bg-neutral-950 transition-colors border-r border-black/50"
+                                className="w-[14vw] h-[10vw] max-w-[56px] max-h-[40px] flex items-center justify-center hover:bg-neutral-700 active:bg-neutral-950 transition-colors border-r border-black/50"
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/70">
                                     <polyline points="15 18 9 12 15 6" />
@@ -145,7 +145,7 @@ export const TVShell = ({ children, isPoweredOn = true, onChannelUp, onChannelDo
                             </button>
                             <button
                                 onClick={onChannelUp}
-                                className="w-14 h-10 flex items-center justify-center hover:bg-neutral-700 active:bg-neutral-950 transition-colors"
+                                className="w-[14vw] h-[10vw] max-w-[56px] max-h-[40px] flex items-center justify-center hover:bg-neutral-700 active:bg-neutral-950 transition-colors"
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/70">
                                     <polyline points="9 18 15 12 9 6" />
@@ -157,7 +157,7 @@ export const TVShell = ({ children, isPoweredOn = true, onChannelUp, onChannelDo
                     {/* Volume Placeholder */}
                     <button
                         onClick={onVolumeClick}
-                        className="w-12 h-12 rounded-full bg-neutral-800 border border-white/10 flex items-center justify-center text-white/50 active:scale-95 transition-transform"
+                        className="w-[12vw] h-[12vw] max-w-[48px] max-h-[48px] rounded-full bg-neutral-800 border border-white/10 flex items-center justify-center text-white/50 active:scale-95 transition-transform"
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />

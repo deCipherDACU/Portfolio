@@ -37,22 +37,22 @@ export const ChannelGallery = ({ isOpen, onClose, channel, projects }: ChannelGa
     return (
         <Modal isOpen={isOpen} onClose={onClose} title={channel.name}>
             <div className="flex flex-col h-full bg-black text-white">
-                <div className="p-6 border-b border-white/10 flex items-center justify-between bg-zinc-950">
+                <div className="p-[4vw] md:p-6 border-b border-white/10 flex items-center justify-between bg-zinc-950">
                     <div className="flex items-center gap-3">
-                        <h2 className="text-2xl font-bold font-display uppercase tracking-widest text-primary glow-text">{channel.name}</h2>
+                        <h2 className="text-[length:var(--font-size-xl)] font-bold font-display uppercase tracking-widest text-primary glow-text">{channel.name}</h2>
                     </div>
                 </div>
 
-                <div className="p-6 overflow-y-auto custom-scrollbar">
+                <div className="p-[4vw] md:p-6 overflow-y-auto custom-scrollbar">
                     {/* Filters */}
                     <div className="flex flex-wrap gap-2 mb-8">
-                        <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mr-4 self-center">Filter Sequence:</span>
+                        <span className="text-[length:var(--font-size-xs)] font-bold uppercase tracking-[0.2em] text-white/40 mr-4 self-center">Filter Sequence:</span>
                         {allTags.map(tag => (
                             <button
                                 key={tag}
                                 onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
                                 className={`
-                                    px-4 py-2 rounded-sm text-[10px] font-bold uppercase tracking-wider border transition-all duration-300
+                                    px-[3vw] py-[1.5vw] md:px-4 md:py-2 rounded-sm text-[length:var(--font-size-xs)] font-bold uppercase tracking-wider border transition-all duration-300
                                     ${selectedTag === tag
                                         ? 'bg-primary text-black border-primary shadow-[0_0_15px_#FAC638]'
                                         : 'bg-black text-white/60 border-white/10 hover:border-primary/50 hover:text-white'
@@ -65,7 +65,7 @@ export const ChannelGallery = ({ isOpen, onClose, channel, projects }: ChannelGa
                     </div>
 
                     {filteredProjects.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[4vw] md:gap-6">
                             {filteredProjects.map(project => (
                                 <ProjectCard
                                     key={project.id}
