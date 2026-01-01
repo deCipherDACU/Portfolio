@@ -129,12 +129,12 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
                     <div className="absolute inset-0 flex flex-col justify-between p-8 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none">
                         <div className="flex justify-between items-start">
                             <div className="bg-black/80 backdrop-blur-sm px-4 py-2 rounded-sm border-l-4 border-primary">
-                                <span className="text-4xl font-display font-bold text-white tracking-widest shadow-black drop-shadow-lg">
+                                <span className="text-2xl md:text-4xl font-display font-bold text-white tracking-widest shadow-black drop-shadow-lg">
                                     {channel.number}
                                 </span>
                             </div>
                             <div className="text-right">
-                                <h2 className="text-3xl font-bold font-display text-white uppercase tracking-tighter drop-shadow-lg">
+                                <h2 className="text-xl md:text-3xl font-bold font-display text-white uppercase tracking-tighter drop-shadow-lg">
                                     {channel.name}
                                 </h2>
                                 <div className={`text-[10px] uppercase tracking-[0.3em] font-bold bg-black/50 px-2 py-0.5 inline-block mt-1 ${hasError ? 'text-red-500' : 'text-primary'}`}>
@@ -161,9 +161,9 @@ export const TVScreen = ({ channel, isPoweredOn, isTurningOff, onTurnOn }: TVScr
             >
                 <Button
                     onClick={onTurnOn}
-                    className="bg-transparent border border-green-900/50 text-green-500 hover:bg-green-900/20 hover:text-green-400 hover:border-green-500/50 text-xl px-8 py-4 font-mono uppercase tracking-widest transition-all duration-300"
+                    className="bg-transparent border border-green-900/50 text-green-500 hover:bg-green-900/20 hover:text-green-400 hover:border-green-500/50 text-sm md:text-xl px-4 py-2 md:px-8 md:py-4 font-mono uppercase tracking-widest transition-all duration-300"
                 >
-                    <Power className="w-5 h-5 mr-3" />
+                    <Power className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
                     Initialize System
                 </Button>
             </PowerOnQuote>

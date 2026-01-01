@@ -10,7 +10,7 @@ export const Work = () => {
 
     return (
         <section id="work" className="py-20 px-8 max-w-7xl mx-auto bg-black min-h-screen">
-            <h2 className="text-6xl font-bold font-display text-primary mb-16 tracking-tighter uppercase relative inline-block">
+            <h2 className="text-4xl md:text-6xl font-bold font-display text-primary mb-16 tracking-tighter uppercase relative inline-block">
                 Selected Works
                 <div className="absolute -bottom-4 left-0 w-full h-2 bg-primary/20">
                     <div className="h-full w-1/3 bg-primary animate-pulse" />
@@ -69,20 +69,20 @@ export const Work = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
 
                             <div className="absolute bottom-10 left-10 z-10 transition-transform duration-500 group-hover:translate-x-2">
-                                <span className="inline-block bg-primary text-black px-2 py-1 text-xs font-bold uppercase tracking-widest mb-4">
+                                <span className="inline-block bg-primary text-black px-2 py-1 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-4">
                                     {portfolioContent.featuredVideo.category}
                                 </span>
-                                <h1 className="text-5xl md:text-7xl font-bold text-white font-display uppercase tracking-tighter leading-none mb-2 drop-shadow-xl">
+                                <h1 className="text-xl md:text-7xl font-bold text-white font-display uppercase tracking-tighter leading-none mb-2 drop-shadow-xl">
                                     {portfolioContent.featuredVideo.title}
                                 </h1>
-                                <p className="text-white/60 max-w-lg mb-8 font-light">
+                                <p className="text-white/60 max-w-lg mb-8 font-light hidden md:block">
                                     {portfolioContent.featuredVideo.description || "Interactive showreel featuring commercial, narrative, and experimental works."}
                                 </p>
                                 <Button
-                                    className="bg-white text-black hover:bg-primary hover:text-black border-none px-8 py-6 text-lg font-bold uppercase tracking-widest"
+                                    className="bg-white text-black hover:bg-primary hover:text-black border-none px-3 py-2 md:px-8 md:py-6 text-xs md:text-lg font-bold uppercase tracking-widest"
                                     onClick={() => setActiveVideo(portfolioContent.featuredVideo.id)}
                                 >
-                                    <Play className="mr-2 h-5 w-5 fill-current" />
+                                    <Play className="mr-2 h-3 w-3 md:h-5 md:w-5 fill-current" />
                                     Play Video
                                 </Button>
                             </div>

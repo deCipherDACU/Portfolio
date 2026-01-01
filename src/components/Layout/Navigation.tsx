@@ -60,7 +60,7 @@ export const Navigation = () => {
             </div>
             {/* Mobile Menu Overlay */}
             {isMenuOpen && (
-                <div className="fixed inset-0 top-20 z-40 bg-slate-950 flex flex-col items-center justify-center gap-10 animate-in fade-in slide-in-from-top-4 duration-300">
+                <div className="fixed inset-0 top-20 z-40 bg-slate-950/90 backdrop-blur-xl flex flex-col items-center justify-center gap-10 animate-in fade-in slide-in-from-top-4 duration-300">
                     {navLinks.map((link) => (
                         <a
                             key={link.label}

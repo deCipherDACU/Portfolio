@@ -13,7 +13,7 @@ export const About = () => {
                     <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/20" />
                 </div>
 
-                <h2 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter mb-12 leading-none font-display text-center">
+                <h2 className="text-4xl md:text-8xl font-black text-white uppercase tracking-tighter mb-12 leading-none font-display text-center">
                     VISUAL <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200 glow-text">SYSTEMS</span> ARCHITECT.
                 </h2>
 

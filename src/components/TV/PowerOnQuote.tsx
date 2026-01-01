@@ -35,7 +35,7 @@ export const PowerOnQuote = ({ isVisible, quote, author, children }: PowerOnQuot
         >
             <div className="relative z-10 max-w-2xl px-8 text-center">
                 <div className="mb-6 chromatic-aberration">
-                    <h2 className="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight uppercase italic font-mono screen-flicker">
+                    <h2 className="text-lg md:text-4xl font-black text-white leading-tight tracking-tight uppercase italic font-mono screen-flicker">
                         "{quote}"
                     </h2>
                 </div>
