@@ -1,13 +1,15 @@
-import video1 from '../assets/videos/1.mp4';
-import video2 from '../assets/videos/2.mp4';
-import video4 from '../assets/videos/4.mp4';
-import video5 from '../assets/videos/5.mp4';
-import video6 from '../assets/videos/6.mp4';
-import video7 from '../assets/videos/7.mp4';
-import video9 from '../assets/videos/9.mp4';
-import video10 from '../assets/videos/10.mp4';
-import video11 from '../assets/videos/11.mp4';
-import video13 from '../assets/videos/13.mp4';
+import video1 from '../assets/videos/1.webm';
+import video2 from '../assets/videos/2.webm';
+import video3 from '../assets/videos/3.webm';
+import video4 from '../assets/videos/4.webm';
+import video5 from '../assets/videos/5.webm';
+import video6 from '../assets/videos/6.webm';
+import video7 from '../assets/videos/7.webm';
+// video8 is missing, reusing video1 as placeholder
+import video9 from '../assets/videos/9.webm';
+import video10 from '../assets/videos/10.webm';
+import video11 from '../assets/videos/11.webm';
+
 import type { Channel } from './types';
 
 export const channels: Channel[] = [
@@ -16,7 +18,7 @@ export const channels: Channel[] = [
         number: '01',
         name: 'Showcase 01',
         accentColor: 'from-purple-500 to-pink-500',
-        description: 'Visual showcase featuring 1.mp4',
+        description: 'Visual showcase featuring 1.webm',
         identMedia: video1,
         mediaType: 'video',
         icon: 'Play',
@@ -26,7 +28,7 @@ export const channels: Channel[] = [
         number: '02',
         name: 'Showcase 02',
         accentColor: 'from-orange-500 to-red-500',
-        description: 'Visual showcase featuring 2.mp4',
+        description: 'Visual showcase featuring 2.webm',
         identMedia: video2,
         mediaType: 'video',
         icon: 'Play',
@@ -36,8 +38,8 @@ export const channels: Channel[] = [
         number: '03',
         name: 'Showcase 03',
         accentColor: 'from-blue-500 to-cyan-500',
-        description: 'Visual showcase featuring 4.mp4',
-        identMedia: video4,
+        description: 'Visual showcase featuring 3.webm',
+        identMedia: video3,
         mediaType: 'video',
         icon: 'Play',
     },
@@ -46,8 +48,8 @@ export const channels: Channel[] = [
         number: '04',
         name: 'Showcase 04',
         accentColor: 'from-green-500 to-teal-500',
-        description: 'Visual showcase featuring 5(1).mp4',
-        identMedia: video5,
+        description: 'Visual showcase featuring 4.webm',
+        identMedia: video4,
         mediaType: 'video',
         icon: 'Play',
     },
@@ -56,8 +58,8 @@ export const channels: Channel[] = [
         number: '05',
         name: 'Showcase 05',
         accentColor: 'from-yellow-500 to-amber-500',
-        description: 'Visual showcase featuring 5(2).mp4',
-        identMedia: video5, // Reusing 5.mp4 as fallback/replacement
+        description: 'Visual showcase featuring 5.webm',
+        identMedia: video5,
         mediaType: 'video',
         icon: 'Play',
     },
@@ -66,8 +68,9 @@ export const channels: Channel[] = [
         number: '06',
         name: 'Showcase 06',
         accentColor: 'from-indigo-500 to-violet-500',
-        description: 'Visual showcase featuring 5.mp4',
-        identMedia: video5,
+        description: 'Visual showcase featuring 6.webm',
+        identMedia: video6,
+        mediaType: 'video',
         icon: 'Play',
     },
     {
@@ -75,8 +78,8 @@ export const channels: Channel[] = [
         number: '07',
         name: 'Showcase 07',
         accentColor: 'from-pink-500 to-rose-500',
-        description: 'Visual showcase featuring 6.mp4',
-        identMedia: video6,
+        description: 'Visual showcase featuring 7.webm',
+        identMedia: video7,
         mediaType: 'video',
         icon: 'Play',
     },
@@ -85,8 +88,8 @@ export const channels: Channel[] = [
         number: '08',
         name: 'Showcase 08',
         accentColor: 'from-red-500 to-orange-500',
-        description: 'Visual showcase featuring 7.mp4',
-        identMedia: video7,
+        description: 'Visual showcase featuring 7.webm (Reused)',
+        identMedia: video7, // Reusing 7 as 8 is missing
         mediaType: 'video',
         icon: 'Play',
     },
@@ -95,7 +98,7 @@ export const channels: Channel[] = [
         number: '09',
         name: 'Showcase 09',
         accentColor: 'from-cyan-500 to-blue-500',
-        description: 'Visual showcase featuring 9.mp4',
+        description: 'Visual showcase featuring 9.webm',
         identMedia: video9,
         mediaType: 'video',
         icon: 'Play',
@@ -105,7 +108,7 @@ export const channels: Channel[] = [
         number: '10',
         name: 'Showcase 10',
         accentColor: 'from-teal-500 to-green-500',
-        description: 'Visual showcase featuring 10.mp4',
+        description: 'Visual showcase featuring 10.webm',
         identMedia: video10,
         mediaType: 'video',
         icon: 'Play',
@@ -115,18 +118,8 @@ export const channels: Channel[] = [
         number: '11',
         name: 'Showcase 11',
         accentColor: 'from-amber-500 to-yellow-500',
-        description: 'Visual showcase featuring 11.mp4',
+        description: 'Visual showcase featuring 11.webm',
         identMedia: video11,
-        mediaType: 'video',
-        icon: 'Play',
-    },
-    {
-        id: 'ch-12',
-        number: '12',
-        name: 'Showcase 12',
-        accentColor: 'from-violet-500 to-purple-500',
-        description: 'Visual showcase featuring 13.mp4',
-        identMedia: video13,
         mediaType: 'video',
         icon: 'Play',
     },
