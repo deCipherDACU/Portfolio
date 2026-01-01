@@ -97,7 +97,7 @@ export const portfolioContent = {
             title: "Berserk",
             category: "Digital Art",
             description: "A gritty, high-contrast tribute to dark fantasy.",
-            image: "/Berserk.jpg",
+            image: "/Berserk.webp",
             details: {
                 colorPalette: ["#0a0a0a", "#8b0000", "#c0c0c0", "#2b2b2b"],
                 theme: "Dark Fantasy / Manga Noir",
@@ -109,7 +109,7 @@ export const portfolioContent = {
             title: "Duality",
             category: "Abstract",
             description: "Exploration of symmetry and contrasting forces.",
-            image: "/Duality.png",
+            image: "/Duality.webp",
             details: {
                 colorPalette: ["#1a1a2e", "#e94560", "#0f3460", "#f8f8f8"],
                 theme: "Cyber-Surrealism",
@@ -121,7 +121,7 @@ export const portfolioContent = {
             title: "Grandmaster",
             category: "Editorial",
             description: "Strategic majesty captured in a visual hierarchy.",
-            image: "/Grandmaster.png",
+            image: "/Grandmaster.webp",
             details: {
                 colorPalette: ["#ffd700", "#1e1e1e", "#ffffff", "#4a4a4a"],
                 theme: "Royal Minimalism",
@@ -133,7 +133,7 @@ export const portfolioContent = {
             title: "I am the Universe",
             category: "Cosmic",
             description: "Space-age psychedelia meets modern typography.",
-            image: "/I am the Universe.jpg",
+            image: "/I am the Universe.webp",
             details: {
                 colorPalette: ["#240046", "#7b2cbf", "#ff9e00", "#e0aaff"],
                 theme: "Retro Futurism",
@@ -145,7 +145,7 @@ export const portfolioContent = {
             title: "Me and Who on Mars",
             category: "Sci-Fi",
             description: "A lonely journey across the red planet.",
-            image: "/Me and Who on Mars.png",
+            image: "/Me and Who on Mars.webp",
             details: {
                 colorPalette: ["#9d0208", "#faa307", "#03071e", "#ffe6a7"],
                 theme: "Martian Solitude",
@@ -157,7 +157,7 @@ export const portfolioContent = {
             title: "Surfer Girl",
             category: "Lifestyle",
             description: "Vaporwave aesthetics for the digital wave.",
-            image: "/Surfer Girl.png",
+            image: "/Surfer Girl.webp",
             details: {
                 colorPalette: ["#ff006e", "#3a86ff", "#8338ec", "#ffbe0b"],
                 theme: "Vaporwave / Y2K",
@@ -169,7 +169,7 @@ export const portfolioContent = {
             title: "The Bandit",
             category: "Character",
             description: "Wanted dead or alive.",
-            image: "/The Bandit.jpg",
+            image: "/The Bandit.webp",
             details: {
                 colorPalette: ["#3e2723", "#d7ccc8", "#5d4037", "#a1887f"],
                 theme: "Western Grunge",
@@ -181,7 +181,7 @@ export const portfolioContent = {
             title: "Void Club",
             category: "Event",
             description: "Enter the unknown.",
-            image: "/Void Club.jpg",
+            image: "/Void Club.webp",
             details: {
                 colorPalette: ["#000000", "#00ff41", "#121212", "#ffffff"],
                 theme: "Industrial Techno",

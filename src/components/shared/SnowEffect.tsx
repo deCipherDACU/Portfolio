@@ -14,8 +14,10 @@ export const SnowEffect = () => {
 
     useEffect(() => {
         const flakes: Snowflake[] = [];
-        // Generate 200 snowflakes for a good density
-        for (let i = 0; i < 200; i++) {
+        // Reduce count on mobile/small screens
+        const count = window.innerWidth < 768 ? 50 : 200;
+
+        for (let i = 0; i < count; i++) {
             flakes.push({
                 id: i,
                 left: Math.random() * 100, // Random horizontal position
@@ -29,7 +31,7 @@ export const SnowEffect = () => {
     }, []);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-[1] overflow-hidden" aria-hidden="true">
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
             {snowflakes.map((flake) => (
                 <div
                     key={flake.id}
