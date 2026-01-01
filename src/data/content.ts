@@ -99,9 +99,9 @@ export const portfolioContent = {
             description: "A gritty, high-contrast tribute to dark fantasy.",
             image: "/Berserk.webp",
             details: {
-                colorPalette: ["#0a0a0a", "#8b0000", "#c0c0c0", "#2b2b2b"],
+                colorPalette: ["#442a28", "#c84644", "#782d2c", "#5c1817", "#a43937", "#2a1716"],
                 theme: "Dark Fantasy / Manga Noir",
-                process: "Created by blending high-contrast manga panels with heavy texture overlays. Used 'Threshold' adjustments to flatten values, followed by a 'Gradient Map' for the blood-red accents. Final grunge textures added via screen blending mode to simulate worn paper."
+                process: "Manga art pushed into a gritty red/black print look; heavy distress; bold title lockup like a film poster."
             }
         },
         {
@@ -111,9 +111,9 @@ export const portfolioContent = {
             description: "Exploration of symmetry and contrasting forces.",
             image: "/Duality.webp",
             details: {
-                colorPalette: ["#1a1a2e", "#e94560", "#0f3460", "#f8f8f8"],
+                colorPalette: ["#4763cd", "#f7f9fc", "#384a89", "#c6d1ec", "#8b9dd7", "#24293c"],
                 theme: "Cyber-Surrealism",
-                process: "Started with a mirrored collage technique. Used 'Liquify' filters to distort organic shapes against geometric grids. The chromatic aberration effect was achieved by shifting RGB channels manually, and 'Curves' were used to punch up the neon contrast."
+                process: "Editorial cover grid; blue field; ribbon/scroll graphic as the focal symbol; restrained, clean spacing with print texture."
             }
         },
         {
@@ -123,9 +123,9 @@ export const portfolioContent = {
             description: "Strategic majesty captured in a visual hierarchy.",
             image: "/Grandmaster.webp",
             details: {
-                colorPalette: ["#ffd700", "#1e1e1e", "#ffffff", "#4a4a4a"],
+                colorPalette: ["#f9f7f2", "#323030", "#fa2c2c", "#d3d0ce", "#656362", "#a29c9b"],
                 theme: "Royal Minimalism",
-                process: "Focused on typography interplay. The central figure was masked using the 'Pen Tool' for precision. Background features a custom chessboard pattern with 'Gaussian Blur' for depth. Gold accents created using 'Bevel & Emboss' layer styles mixed with metallic texture clipping masks."
+                process: "B/W portrait cut-out centered; red starburst 'impact' shape; mixed collage elements (hand/rope/chess) + notation text for narrative density."
             }
         },
         {
@@ -135,9 +135,9 @@ export const portfolioContent = {
             description: "Space-age psychedelia meets modern typography.",
             image: "/I am the Universe.webp",
             details: {
-                colorPalette: ["#240046", "#7b2cbf", "#ff9e00", "#e0aaff"],
+                colorPalette: ["#49538d", "#ece6d4", "#666e9b", "#898eac", "#cfcecc", "#aeb0bd"],
                 theme: "Retro Futurism",
-                process: "Composited NASA nebula imagery with 3D wireframe renders. Used 'Hue/Saturation' layers to unifying the color grade into deep purples and oranges. Noise added via 'Camera Raw Filter' to emulate film grain."
+                process: "Two-ink feel: blue + warm off-white; explosive radial streaks + tiny figure for scale contrast; large serif headline like a manifesto poster."
             }
         },
         {
@@ -147,9 +147,9 @@ export const portfolioContent = {
             description: "A lonely journey across the red planet.",
             image: "/Me and Who on Mars.webp",
             details: {
-                colorPalette: ["#9d0208", "#faa307", "#03071e", "#ffe6a7"],
+                colorPalette: ["#eaeaeb", "#232323", "#0b0b0b", "#434343", "#727273", "#ababac"],
                 theme: "Martian Solitude",
-                process: "Matte painting technique. Blended various desert landscapes using soft brushes. The planet in the sky was enhanced with 'Outer Glow' styles. Color grading done heavily with 'Selective Color' to push the reds and oranges while keeping shadows crushed."
+                process: "Monochrome frame with manga/anime still inside a border system; lots of side typography blocks (Japanese + metadata) like a ticket/postcard layout."
             }
         },
         {
@@ -159,9 +159,9 @@ export const portfolioContent = {
             description: "Vaporwave aesthetics for the digital wave.",
             image: "/Surfer Girl.webp",
             details: {
-                colorPalette: ["#ff006e", "#3a86ff", "#8338ec", "#ffbe0b"],
+                colorPalette: ["#7c796c", "#c6a2e2", "#efe8d5", "#a49a92", "#cac6b1", "#181516"],
                 theme: "Vaporwave / Y2K",
-                process: "Heavily utilized 'Gradient Maps' for the sunset vibes. The glitch effects on the water were made by duplicating layers and using the 'Wind' filter. Typography warped using 'Envelope Distort' to match the wave curvature."
+                process: "B/W action photo with strong grain; lavender field + sharp cream starbursts; small 'label' elements to sell a zine/print aesthetic."
             }
         },
         {
@@ -171,9 +171,9 @@ export const portfolioContent = {
             description: "Wanted dead or alive.",
             image: "/The Bandit.webp",
             details: {
-                colorPalette: ["#3e2723", "#d7ccc8", "#5d4037", "#a1887f"],
+                colorPalette: ["#c8bdc3", "#361524", "#5960a3", "#a08b97", "#705362", "#f8f6f8"],
                 theme: "Western Grunge",
-                process: "Simulated a wanted poster aesthetic. Used 'Multiply' blend modes for the paper texture. The portrait was treated with a 'Halftone Pattern' filter to mimic old print press tech. Burnt edges created with a custom brush and 'Color Burn' mode."
+                process: "Duotone halftone portrait; splatter overlays; big condensed type + date/info blocks—classic gig-poster language."
             }
         },
         {
@@ -183,9 +183,9 @@ export const portfolioContent = {
             description: "Enter the unknown.",
             image: "/Void Club.webp",
             details: {
-                colorPalette: ["#000000", "#00ff41", "#121212", "#ffffff"],
+                colorPalette: ["#ef5a5f", "#ed5256", "#f06367", "#59565b", "#f2ebe1", "#cda4a2"],
                 theme: "Industrial Techno",
-                process: "High-contrast monochrome base with a singular neon green accent. Used 'Displace' maps with a glitch texture to distort the text. The fog effect was painted in with a low-flow soft brush and 'Motion Blur' to create movement."
+                process: "Minimal layout: flat red paper texture, small stacked type, falling cut-out figure; logo as a secondary accent."
             }
         }
     ] as DesignProject[]
