@@ -59,6 +59,13 @@ export const portfolioContent = {
             description: "AI documentary short",
             youtubeId: "VvMv0XYo9B8",
         },
+        {
+            id: "vid-h4",
+            title: "End to end AI Advertisement | IIT Roorkee",
+            category: "AI Advertisement",
+            description: "End to end AI Advertisement created for IIT Roorkee.",
+            youtubeId: "3LsoPczCe3Y",
+        },
     ] as VideoProject[],
 
     // Grid of secondary videos - Vertical (9:16)
