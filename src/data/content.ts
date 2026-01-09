@@ -9,6 +9,7 @@ export interface VideoProject {
     url?: string; // Direct link for Instagram/other platforms
     description?: string; // Optional description
     videoSrc?: string; // Direct video file source
+    views?: string;
 }
 
 export interface DesignProject {
@@ -73,25 +74,28 @@ export const portfolioContent = {
     verticalVideos: [
         {
             id: "vid-v1",
-            title: "Instagram Reel 1",
+            title: "Song Breakdown: Lyla",
             category: "Social Media",
             platform: 'instagram',
+            views: "585K",
             url: "https://www.instagram.com/reel/DLJv55WSuK3/",
             thumbnail: "/1.jpg",
         },
         {
             id: "vid-v2",
-            title: "Instagram Reel 2",
+            title: "Filmaker in Scope : Pawo Choyning Dorji",
             category: "Social Media",
             platform: 'instagram',
+            views: "1.7M",
             url: "https://www.instagram.com/reel/DLPrCChSnBd/",
             thumbnail: "/2.jpg",
         },
         {
             id: "vid-v3",
-            title: "Instagram Reel 3",
+            title: "Sai Pallavi as Sita Ma",
             category: "Social Media",
             platform: 'instagram',
+            views: "6.5M",
             url: "https://www.instagram.com/reel/DL9PftNSbFY/",
             thumbnail: "/3.jpg",
         },

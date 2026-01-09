@@ -183,7 +183,10 @@ export const Work = () => {
                                 <Play className="text-primary w-12 h-12 fill-current" />
                             </div>
                             <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
-                                <div className="text-xs text-primary font-bold uppercase tracking-wider mb-1">{video.category}</div>
+                                <div className="text-xs text-primary font-bold uppercase tracking-wider mb-1 flex justify-between items-center">
+                                    <span>{video.category}</span>
+                                    {video.views && <span className="text-white/60 font-mono">{video.views}</span>}
+                                </div>
                                 <div className="text-white font-bold leading-tight text-lg">{video.title}</div>
                             </div>
                         </div>
