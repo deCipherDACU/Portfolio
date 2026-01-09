@@ -1,4 +1,4 @@
-import { Play } from 'lucide-react';
+import { Play, Eye } from 'lucide-react';
 import { Button } from '../shared/Button';
 import { portfolioContent } from '../../data/content';
 import { useState } from 'react';
@@ -185,7 +185,12 @@ export const Work = () => {
                             <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
                                 <div className="text-xs text-primary font-bold uppercase tracking-wider mb-1 flex justify-between items-center">
                                     <span>{video.category}</span>
-                                    {video.views && <span className="text-white/60 font-mono">{video.views}</span>}
+                                    {video.views && (
+                                        <div className="flex items-center space-x-1 text-primary/80 bg-primary/10 px-2 py-0.5 rounded-full backdrop-blur-sm">
+                                            <Eye className="w-3 h-3" />
+                                            <span className="font-mono">{video.views}</span>
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="text-white font-bold leading-tight text-lg">{video.title}</div>
                             </div>
