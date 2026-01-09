@@ -95,6 +95,30 @@ export const portfolioContent = {
             url: "https://www.instagram.com/reel/DL9PftNSbFY/",
             thumbnail: "/3.jpg",
         },
+        {
+            id: "vid-v4",
+            title: "Hidden Gem in Maharashtra",
+            category: "Travel",
+            platform: 'instagram',
+            url: "https://www.instagram.com/reel/DPdTeeFEykM/?igsh=MXFmcDdzMGg5MDdjZg==",
+            thumbnail: "/maharashtra.jpg",
+        },
+        {
+            id: "vid-v5",
+            title: "Winter Escape 2025",
+            category: "Travel",
+            platform: 'instagram',
+            url: "https://www.instagram.com/reel/DSuy_k2iYJT/?igsh=OWF0YTd4MHVscXg2",
+            thumbnail: "/winter_escape.jpg",
+        },
+        {
+            id: "vid-v6",
+            title: "Experience Switzerland",
+            category: "Travel",
+            platform: 'instagram',
+            url: "https://www.instagram.com/reel/DSMayn_jAOQ/?igsh=MTk4M2thYm1pd3N2Yw==",
+            thumbnail: "/switzerland.jpg",
+        },
     ] as VideoProject[],
 
     // Graphic Design Showcase (Carousel)
